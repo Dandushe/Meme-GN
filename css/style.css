@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: #fff1f1;
+}
+
+
+/* LAY-OUT */
+
+.main-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border-right: 1px solid #e1e0e0;
+    border-left: 1px solid #e1e0e0; */
+}
+
+
+/* HEADER */
+
+.top-nav {
+    background: linear-gradient(110deg, #ff6464 48%, #fa8c5a 60%);
+    overflow: hidden;
+}
+
+.top-nav .nav-logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+}
+
+.top-nav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Amatic SC', cursive;
+}
+
+.top-nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.top-nav a.active {
+    background-color: #f18928;
+    color: white;
+}
+
+.top-nav .nav-content {
+    height: 66px;
+}
+
+
+/* MAIN */
+
+.main-container {
+    color: #fff;
+    height: 100%;
+    background: linear-gradient(110deg, #ff6464 60%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #5ac8fa 70%, #fa8c5a 70%);
+}
+
+.search-area {
+    margin-top: 20px;
+}
+
+.gallery-area {
+    width: 100%;
+}
+
+.gallery-container {
+    /* height: 932px; */
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    width: 100%;
+    /* grid-template-rows: auto; */
+}
+
+
+/* .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auot-fill, minmax(160px, 1fr));
+    grid-gap: 10px;
+} */
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.gallery-container img {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.footer-container {
+    height: 12.5rem;
+    background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+}
+
+.footer-container p {
+    color: white;
+    font-size: 2.125rem;
+    font-family: 'Amatic SC', cursive;
+    border-bottom-style: dashed;
+}
+
+.footer-container p:hover {
+    color: yellow;
+}
+
+.footer-container .footer-logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-container small {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 1.125rem;
+}
+
+
+/* CANVAS */
+
+.canvas-area {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding-left: 20px;
+    margin: auto 115px auto 119px;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+
+/* CNANVAS_CONTROLLERS */
+
+.edit-options {
+    /* max-width: 380px; */
+    height: 500px;
+    padding: 26px 20px 23px 51px;
+}
+
+.edit-options .meme-text {
+    height: 60px;
+    width: 373px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+.line-options {
+    margin-bottom: 20px;
+}
+
+.edit-options .btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.edit-options img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.font-style-select {
+    width: 218px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.fonts-options {
+    margin-bottom: 10px;
+}
+
+.share button {
+    height: 60px;
+    width: 120px;
+    border-radius: 12px;
+    background-color: rgb(235, 144, 26);
+}
+
+
+/* FLEX-ELPERS */
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex.flex-direction {
+    flex-direction: column;
+}
+
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1100px) {
+    .canvas-area {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 800px) {
+    .main-layout {
+        width: 650px;
+        height: auto;
+    }
+}

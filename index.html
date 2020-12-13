@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MEME-GR</title>
+</head>
+
+<body onload="onInit()" onkeydown="handleKey(event)">
+
+    <header class="main-header">
+
+        <div class="top-nav main-layout nav-content flex space-between align-center">
+            <div class="nav-logo">
+                Meme-Gn
+                <!-- <img src="/LOGO/LOGO.png" alt=""> -->
+            </div>
+            <div class="nav-links flex">
+                <a class="active" href="#" onclick="onRenderGallery()">Gallery</a>
+                <a href="#" onclick="onRenderCanvas()">Editor</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main-container main-layout flex space-between">
+
+        <!-- 
+        <section class="search-area">
+            <input type="text" class="search" placeholder="Search.." name="search">
+
+        </section> -->
+
+
+        <section class="canvas-area flex">
+            <div class="canvas-container">
+                <canvas onmousedown="checkEventPos(event)" id="edit-canvas" width="500" height="500"></canvas>
+            </div>
+            <div class="edit-options flex flex-direction space-between">
+                <input class="meme-text" value="" oninput="onTypeText(this.value)" type="text" placeholder="Meme Text" name="meme-text">
+                <div class="line-options flex space-evenly ">
+                    <button class="height-pos btn" onclick="onSwitchLine(event)"><img
+                            src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+                    <button class="move-line-up btn" value="line-up" onkeydown="handleKey(event)" onclick="onChaneLinePos(-5)"><img src="ICONS/iconfinder_icon-arrow-up-b_211623.png"
+                            alt=""></button>
+                    <button class="move-line-down btn" value="line-down" onkeydown="handleKey(event)" onclick="onChaneLinePos(5)"><img src="ICONS/iconfinder_icon-arrow-down-b_211614.png"
+                            alt=""></button>
+                    <button class="add-img btn" onclick="onAddLine()"><img src="ICONS/add.png" alt=""></button>
+                    <button class="trash btn" onclick="onTypeText('')"><img src="ICONS/trash.png" alt=""></button>
+                </div>
+                <div class="text-options flex space-evenly">
+                    <button class="increase-font btn" value="increase-font" onclick="onSetSize(1)"><img
+                            src="ICONS/increase font - icon.png" alt=""></button>
+                    <button class="decrease-font btn" value="decrease-font" onclick="onSetSize()"><img
+                            src="ICONS/decrease font - icon.png" alt=""></button>
+                    <button class="text-align-L btn" value="align-left" onclick="onAlignSelected(this.value)"><img
+                            src="ICONS/align-to-left.png" alt=""></button>
+                    <button class="text-align-C btn" value="align-center" onclick="onAlignSelected(this.value)"><img
+                            src="ICONS/center-text-alignment.png" alt=""></button>
+                    <button class="text-align-R btn" value="align-right" onclick="onAlignSelected(this.value)"><img
+                            src="ICONS/align-to-right.png" alt=""></button>
+                </div>
+                <div class="fonts-options flex space-evenly">
+
+                    <select class="font-style-select" name="fonts-select" id="">
+                        <option value="impect">Impect</option>
+                    </select>
+
+                    <button class="font-stroke btn"><img src="ICONS/text stroke.png" alt=""></button>
+                    <button class="brush btn"><img src="ICONS/paint-board-and-brush.png" alt=""></button>
+                </div>
+                <div class="share"><button type="submit"><img src="ICONS/iconfinder_social_share_this_710270.png"
+                            alt=""></button>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section class="gallery-area">
+            <div class="gallery-container flex-justify-center">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container main-layout align-center flex flex-direction flex-justify-center">
+            <div>
+                <p>Select an image &#8674; Edit it &#8674; Share with friends</p>
+            </div>
+            <div class="footer-logo">
+                Meme-Gn
+            </div>
+            <small>all rights reserved Daniel-levy 2020</small>
+        </div>
+    </footer>
+
+
+    <script src="js/util-meme.js"></script>
+    <script src="js/upload-service-meme.js"></script>
+    <script src="js/service-meme.js"></script>
+    <script src="js/controller-meme.js"></script>
+</body>
+
+</html>
